@@ -52,3 +52,9 @@ ul, ol{
 	height: 0;
 	opacity: 0;
 }
+@media (max-width: 768px) {
+	.previewarea, .codearea{
+		width: 100%;
+	}
+	
+}
