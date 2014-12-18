@@ -1,5 +1,6 @@
 #Rich-Text Editing 
 --
+See the demo http://nmanikiran.github.io/designEditor/
 
 
 #### Preview of the Design
