@@ -9,6 +9,6 @@ See the demo http://nmanikiran.github.io/designEditor/
 
 **Related links**
 --
-https://developer.mozilla.org/en/docs/Rich-Text_Editing_in_Mozilla - automatic!
-https://developer.mozilla.org/en-US/docs/Web/API/document.execCommand - automatic!
-https://blog.whatwg.org/the-road-to-html-5-contenteditable - automatic!
+https://developer.mozilla.org/en/docs/Rich-Text_Editing_in_Mozilla 
+https://developer.mozilla.org/en-US/docs/Web/API/document.execCommand 
+https://blog.whatwg.org/the-road-to-html-5-contenteditable 
