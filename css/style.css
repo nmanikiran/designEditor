@@ -18,13 +18,38 @@ body{
 	color: #333;
 	background-color: #fff;
 }
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
 .clearfix{
 	clear: both;
 	content: "";
 	display: table;
 }
+hr{
+	border: 1px solid #f5f5f5;
+}
 .container{
 	padding: 20px;
+}
+.top-head{
+	margin-bottom: 20px;
+}
+.top-head  h1{
+	font-size: 3em;
+	text-align: center;
+	padding: 5px 0;
 }
 .btn-group{
 	float: left;
@@ -49,7 +74,7 @@ body{
 }
  .previewarea, .codearea{
 	border: 1px solid #ccc;
-	height: 500px;
+	height: 400px;
 	padding: 5px;
 }
 
@@ -74,6 +99,10 @@ body{
 }
 input[type='color']{
 	height: 22px;
+}
+.copyright{
+	text-align: center;
+	padding: 10px 0;
 }
 @media (max-width: 768px) {
 	.container{

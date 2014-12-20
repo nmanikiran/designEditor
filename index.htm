@@ -11,8 +11,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row mywysiswyg clearfix">
+
+    <section class="container">
+   <header class="top-head">
+	    <h1>Rich-Text Design Editor</h1>
+	    <hr />
+	</header>
+        <section class="row mywysiswyg clearfix">
             <div class="btn-group">
                 <a href="#" class="btn" title="Bold" onclick="format('bold')"> <i class="fa fa-bold"></i> </a>
                 <a href="#" class="btn" title="italic" onclick="format('italic')"> <i class="fa fa-italic"></i> </a>
@@ -46,52 +51,52 @@
                 <a href="#" class="btn" title="Image" onclick="format('insertimage' ,'entet url')"> <i class="fa fa-image"></i> </a>
                 <a href="#" class="btn" title="" onclick="format('table')"> <i class="fa fa-table"></i> </a>
             </div>
-			
-			<div class="btn-group">
-	            <a href="#" class="btn" title="Print" onclick="printDoc()"> <i class="fa fa-print"></i> </a>
-	            <a href="#" class="btn" title="Increase Font Size" onclick="format('increaseFontSize')"> <i class="fa fa-plus"></i> </a>
-	            <a href="#" class="btn" title="Decrease Font Size" onclick="format('decreaseFontSize')"> <i class="fa fa-minus"></i> </a>
-	            <a href="#" class="btn" title="Background Color">
-	                <input type="color" name="color" id="colorPick" onchange="selectChange('backcolor',this.value);">
-	                <!-- <i class="fa fa-h-square"></i> -->
-	                </input>
-	            </a>
-	            <a href="#" class="btn" title="Full Screen" onclick="fullscreen()"> <i class="fa fa-arrows-alt"></i> </a>
-	            </div>
-	            <div class="btn-group">
-            <select name="heading" id="inputHeading" class="form-control" onchange="selectChange('formatblock',this[this.selectedIndex].value);">
-                <option value=""> - Headings - </option>
-                <option value="h1">Heading 1</option>
-                <option value="h2">Heading 2</option>
-                <option value="h3">Heading 3</option>
-                <option value="h4">Heading 4</option>
-                <option value="h5">Heading 5</option>
-                <option value="h6">Heading 6</option>
-            </select>
 
-            <select name="font" id="inputFont" class="form-control" onchange="selectChange('fontname',this[this.selectedIndex].value);">
-                <option value=""> - Font- </option>
-                <option>Arial</option>
-                <option>Arial Black</option>
-                <option>Courier New</option>
-                <option>Times New Roman</option>
-            </select>
-            <select name="" id="fontsize" class="form-control" onchange="selectChange('fontsize',this[this.selectedIndex].value);">
-                <option value=""> - Font Size - </option>
-                <option value="1">Very small</option>
-                <option value="2">A bit small</option>
-                <option value="3">Normal</option>
-                <option value="4">Medium-large</option>
-                <option value="5">Big</option>
-                <option value="6">Very big</option>
-                <option value="7">Maximum</option>
-            </select>
-		</div>
-        </div>
-        <div class="row clearfix">
-            <div class="grid6">
+            <div class="btn-group">
+                <a href="#" class="btn" title="Print" onclick="printDoc()"> <i class="fa fa-print"></i> </a>
+                <a href="#" class="btn" title="Increase Font Size" onclick="format('increaseFontSize')"> <i class="fa fa-plus"></i> </a>
+                <a href="#" class="btn" title="Decrease Font Size" onclick="format('decreaseFontSize')"> <i class="fa fa-minus"></i> </a>
+                <a href="#" class="btn" title="Background Color">
+                    <input type="color" name="color" id="colorPick" onchange="selectChange('backcolor',this.value);">
+                    <!-- <i class="fa fa-h-square"></i> -->
+                    </input>
+                </a>
+                <a href="#" class="btn" title="Full Screen" onclick="fullscreen()"> <i class="fa fa-arrows-alt"></i> </a>
+            </div>
+            <div class="btn-group">
+                <select name="heading" id="inputHeading" class="form-control" onchange="selectChange('formatblock',this[this.selectedIndex].value);">
+                    <option value=""> - Headings - </option>
+                    <option value="h1">Heading 1</option>
+                    <option value="h2">Heading 2</option>
+                    <option value="h3">Heading 3</option>
+                    <option value="h4">Heading 4</option>
+                    <option value="h5">Heading 5</option>
+                    <option value="h6">Heading 6</option>
+                </select>
+
+                <select name="font" id="inputFont" class="form-control" onchange="selectChange('fontname',this[this.selectedIndex].value);">
+                    <option value=""> - Font- </option>
+                    <option>Arial</option>
+                    <option>Arial Black</option>
+                    <option>Courier New</option>
+                    <option>Times New Roman</option>
+                </select>
+                <select name="" id="fontsize" class="form-control" onchange="selectChange('fontsize',this[this.selectedIndex].value);">
+                    <option value=""> - Font Size - </option>
+                    <option value="1">Very small</option>
+                    <option value="2">A bit small</option>
+                    <option value="3">Normal</option>
+                    <option value="4">Medium-large</option>
+                    <option value="5">Big</option>
+                    <option value="6">Very big</option>
+                    <option value="7">Maximum</option>
+                </select>
+            </div>
+        </section>
+        <section class="row clearfix">
+            <section class="grid6">
                 <div class="h-block">Design</div>
-                <div class="previewarea" contenteditable="true" id="editable">
+                <section class="previewarea" contenteditable="true" id="editable">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore illo, perferendis facilis ex deserunt non et ratione quaerat veniam tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus recusandae consectetur dolorum commodi fuga aut quis ex quidem similique quas!
 
                     <h1>Lorem ipsum dolor sit amet.</h1>
@@ -119,22 +124,20 @@
                             <td>mani 2</td>
                         </tr>
                     </table>
-                </div>
-            </div>
-            <div class="grid6">
+                </section>
+            </section>
+            <section class="grid6">
                 <div class="h-block">Code</div>
                 <div class="codearea ">
-                    <div id="viewPre" class="html">
-                    	
-                    </div>
+                    <div id="viewPre" class="html"></div>
                 </div>
-            </div>
-        </div>
-        <!-- Row ends-->
-    </div>
-    </div>
+            </section>
+        </section>        <!-- Row ends-->
+	<footer class="copyright">
+    	&copy Copyright 2014. Rich-Text Design Editor by <em> Mani Kiran</em>
+    </footer>
+    </section>
+    
     <script src="js/main.js"></script>
-
 </body>
-
 </html>
