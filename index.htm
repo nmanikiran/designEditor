@@ -1,130 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Doc Edior</title>
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Doc Edior</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
+
 <body>
-<div class="container clearfix">
-	<div class="col-xs1-2 col-sm-12 col-md-6 col-lg-6 mywysiswyg">
+    <div class="container">
+        <div class="row mywysiswyg clearfix">
+            <div class="btn-group">
+                <a href="#" class="btn" title="Bold" onclick="format('bold')"> <i class="fa fa-bold"></i> </a>
+                <a href="#" class="btn" title="italic" onclick="format('italic')"> <i class="fa fa-italic"></i> </a>
+                <a href="#" class="btn" title="Underline" onclick="format('underline')"> <i class="fa fa-underline"></i> </a>
+                <a href="#" class="btn" title="Strikethrough" onclick="format('strikethrough')"> <i class="fa fa-strikethrough"></i> </a>
+                <a href="#" class="btn" title="Subscript" onclick="format('subscript')"> <i class="fa fa-subscript"></i> </a>
+                <a href="#" class="btn" title="Superscript" onclick="format('superscript')"> <i class="fa fa-superscript"></i> </a>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn" title="Cut" onclick="format('Cut')"> <i class="fa fa-cut"></i> </a>
+                <a href="#" class="btn" title="Copy" onclick="format('Copy')"> <i class="fa fa-copy"></i> </a>
+                <a href="#" class="btn" title="Paste" onclick="format('Paste')"> <i class="fa fa-paste"></i> </a>
+                <a href="#" class="btn" title="Undo" onclick="format('undo')"> <i class="fa fa-rotate-left"></i> </a>
+                <a href="#" class="btn" title="Redo" onclick="format('redo')"> <i class="fa fa-rotate-right"></i> </a>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn" title="Unorder List" onclick="format('insertunorderedlist')"> <i class="fa fa-list-ul"></i> </a>
+                <a href="#" class="btn" title="Order List" onclick="format('insertorderedlist')"> <i class="fa fa-list-ol"></i> </a>
+                <a href="#" class="btn" title="Indent" onclick="format('indent')"> <i class="fa fa-indent"></i> </a>
+                <a href="#" class="btn" title="Outdent" onclick="format('outdent')"> <i class="fa fa-outdent"></i> </a>
+                <a href="#" class="btn" title="Left" onclick="format('justifyleft')"> <i class="fa fa-align-left"></i> </a>
+                <a href="#" class="btn" title="Center" onclick="format('justifycenter')"> <i class="fa fa-align-center"></i> </a>
+                <a href="#" class="btn" title="Right" onclick="format('justifyright')"> <i class="fa fa-align-right"></i> </a>
+                <a href="#" class="btn" title="Justify" onclick="format('justifyfull')"> <i class="fa fa-align-justify"></i> </a>
+                <a href="#" class="btn" title="Paragraph" onclick="format('insertparagraph')"> <i class="fa fa-paragraph"></i> </a>
+            </div>
 
-	<div class="btn-group">
-		<a href="#" class="btn"  title="Bold" onclick="format('bold')"> <i class="fa fa-bold"></i> </a>
-		<a href="#" class="btn" title="italic" onclick="format('italic')"> <i class="fa fa-italic"></i> </a>
-		<a href="#" class="btn"  title="Underline" onclick="format('underline')"> <i class="fa fa-underline"></i> </a>
-		<a href="#" class="btn"  title="Strikethrough" onclick="format('strikethrough')"> <i class="fa fa-strikethrough"></i> </a>
-		<a href="#" class="btn"  title="Subscript" onclick="format('subscript')"> <i class="fa fa-subscript"></i> </a>
-		<a href="#" class="btn"  title="Superscript" onclick="format('superscript')"> <i class="fa fa-superscript"></i> </a>
-	</div>
-	<div class="btn-group">
-		<a href="#" class="btn"  title="Cut" onclick="format('Cut')"> <i class="fa fa-cut"></i> </a>
-		<a href="#" class="btn"  title="Copy" onclick="format('Copy')"> <i class="fa fa-copy"></i> </a>
-		<a href="#" class="btn"  title="Paste" onclick="format('Paste')"> <i class="fa fa-paste"></i> </a>
-		<a href="#" class="btn"  title="Undo" onclick="format('undo')"> <i class="fa fa-rotate-left"></i> </a>
-		<a href="#" class="btn"  title="Redo" onclick="format('redo')"> <i class="fa fa-rotate-right"></i> </a>
-	</div>
-	<div class="btn-group">
-		<a href="#" class="btn"  title="Unorder List" onclick="format('insertunorderedlist')"> <i class="fa fa-list-ul"></i> </a>
-		<a href="#" class="btn"  title="Order List" onclick="format('insertorderedlist')"> <i class="fa fa-list-ol"></i> </a>
-		<a href="#" class="btn"  title="Indent" onclick="format('indent')"> <i class="fa fa-indent"></i> </a>
-		<a href="#" class="btn"  title="Outdent" onclick="format('outdent')"> <i class="fa fa-outdent"></i> </a>
-		<a href="#" class="btn" title="Left" onclick="format('justifyleft')"> <i class="fa fa-align-left"></i> </a>
-		<a href="#" class="btn"  title="Center" onclick="format('justifycenter')"> <i class="fa fa-align-center"></i> </a>
-		<a href="#" class="btn" title="Right" onclick="format('justifyright')"> <i class="fa fa-align-right"></i> </a>
-		<a href="#" class="btn" title="Justify" onclick="format('justifyfull')"> <i class="fa fa-align-justify"></i> </a>
-		<a href="#" class="btn"  title="Paragraph"onclick="format('insertparagraph')"> <i class="fa fa-paragraph"></i> </a>
-	</div>
-	
-	<div class="btn-group">
-		<a href="#" class="btn"  title="Link" onclick="format('createLink')"> <i class="fa fa-link"></i> </a>
-		<a href="#" class="btn"  title="Unlink" onclick="format('unlink')"> <i class="fa fa-unlink"></i> </a>
-		<a href="#" class="btn"  title="Image" onclick="format('insertimage' ,'entet url')"> <i class="fa fa-image"></i> </a>
-		<a href="#" class="btn"  title="" onclick="format('table')"> <i class="fa fa-table"></i> </a>
-	</div>
+            <div class="btn-group">
+                <a href="#" class="btn" title="Link" onclick="format('createLink')"> <i class="fa fa-link"></i> </a>
+                <a href="#" class="btn" title="Unlink" onclick="format('unlink')"> <i class="fa fa-unlink"></i> </a>
+                <a href="#" class="btn" title="Image" onclick="format('insertimage' ,'entet url')"> <i class="fa fa-image"></i> </a>
+                <a href="#" class="btn" title="" onclick="format('table')"> <i class="fa fa-table"></i> </a>
+            </div>
+			
+			<div class="btn-group">
+	            <a href="#" class="btn" title="Print" onclick="printDoc()"> <i class="fa fa-print"></i> </a>
+	            <a href="#" class="btn" title="Increase Font Size" onclick="format('increaseFontSize')"> <i class="fa fa-plus"></i> </a>
+	            <a href="#" class="btn" title="Decrease Font Size" onclick="format('decreaseFontSize')"> <i class="fa fa-minus"></i> </a>
+	            <a href="#" class="btn" title="Background Color">
+	                <input type="color" name="color" id="colorPick" onchange="selectChange('backcolor',this.value);">
+	                <!-- <i class="fa fa-h-square"></i> -->
+	                </input>
+	            </a>
+	            <a href="#" class="btn" title="Full Screen" onclick="fullscreen()"> <i class="fa fa-arrows-alt"></i> </a>
+	            </div>
+	            <div class="btn-group">
+            <select name="heading" id="inputHeading" class="form-control" onchange="selectChange('formatblock',this[this.selectedIndex].value);">
+                <option value=""> - Headings - </option>
+                <option value="h1">Heading 1</option>
+                <option value="h2">Heading 2</option>
+                <option value="h3">Heading 3</option>
+                <option value="h4">Heading 4</option>
+                <option value="h5">Heading 5</option>
+                <option value="h6">Heading 6</option>
+            </select>
 
-	<a href="#" class="btn"  title="Print" onclick="printDoc()"> <i class="fa fa-print"></i> </a>
-	<a href="#" class="btn"  title="Increase Font Size" onclick="format('increaseFontSize')"> <i class="fa fa-plus"></i> </a>
-	<a href="#" class="btn"  title="Decrease Font Size" onclick="format('decreaseFontSize')"> <i class="fa fa-minus"></i> </a>
-	<a href="#" class="btn"  title="Background Color">
-		<input type="color" name="color" id="colorPick" onchange="selectChange('backcolor',this.value);"> 
-		<!-- <i class="fa fa-h-square"></i></input> -->
-	</a>
-	<a href="#" class="btn"  title="Full Screen" onclick="fullscreen()"> <i class="fa fa-arrows-alt"></i> </a>
-	<select name="heading" id="inputHeading" class="form-control" onchange="selectChange('formatblock',this[this.selectedIndex].value);">
-		<option value=""> - Headings - </option>
-		<option value="h1">Heading 1</option>
-		<option value="h2">Heading 2</option>
-		<option value="h3">Heading 3</option>
-		<option value="h4">Heading 4</option>
-		<option value="h5">Heading 5</option>
-		<option value="h6">Heading 6</option>
-	</select>
-	
-	<select name="font" id="inputFont" class="form-control" onchange="selectChange('fontname',this[this.selectedIndex].value);">
-	    <option value=""> - Font- </option>
-	    <option>Arial</option>
-	    <option>Arial Black</option>
-	    <option>Courier New</option>
-	    <option>Times New Roman</option>
-	</select>
-	<select name="" id="fontsize" class="form-control" onchange="selectChange('fontsize',this[this.selectedIndex].value);">
-	    <option value=""> - Font Size - </option>
-	    <option value="1">Very small</option>
-	    <option value="2">A bit small</option>
-	    <option value="3">Normal</option>
-	    <option value="4">Medium-large</option>
-	    <option value="5">Big</option>
-	    <option value="6">Very big</option>
-	    <option value="7">Maximum</option>
-	</select>
-	
-	</div>
-<div class="row">
-	<div class="previewarea" contenteditable="true" id="editable" >
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore illo, perferendis facilis ex deserunt non et ratione quaerat veniam tempore?
+            <select name="font" id="inputFont" class="form-control" onchange="selectChange('fontname',this[this.selectedIndex].value);">
+                <option value=""> - Font- </option>
+                <option>Arial</option>
+                <option>Arial Black</option>
+                <option>Courier New</option>
+                <option>Times New Roman</option>
+            </select>
+            <select name="" id="fontsize" class="form-control" onchange="selectChange('fontsize',this[this.selectedIndex].value);">
+                <option value=""> - Font Size - </option>
+                <option value="1">Very small</option>
+                <option value="2">A bit small</option>
+                <option value="3">Normal</option>
+                <option value="4">Medium-large</option>
+                <option value="5">Big</option>
+                <option value="6">Very big</option>
+                <option value="7">Maximum</option>
+            </select>
+		</div>
+        </div>
+        <div class="row clearfix">
+            <div class="grid6">
+                <div class="h-block">Design</div>
+                <div class="previewarea" contenteditable="true" id="editable">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore illo, perferendis facilis ex deserunt non et ratione quaerat veniam tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus recusandae consectetur dolorum commodi fuga aut quis ex quidem similique quas!
 
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus recusandae consectetur dolorum commodi fuga aut quis ex quidem similique quas!
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est itaque inventore, eum hic, ullam quos sint dolore doloremque rerum!</p>
+                    <br /> HTML CSS JavaScript
+                    <br />
+                    <hr>
+                    <a href="#">Mani</a>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dicta?</span>
+                    <table>
+                        <tr>
+                            <td>mani 1</td>
+                            <td>mani 2</td>
+                        </tr>
+                        <tr>
+                            <td>mani 1</td>
+                            <td>mani 2</td>
+                        </tr>
+                        <tr>
+                            <td>mani 1</td>
+                            <td>mani 2</td>
+                        </tr>
+                        <tr>
+                            <td>mani 1</td>
+                            <td>mani 2</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="grid6">
+                <div class="h-block">Code</div>
+                <div class="codearea ">
+                    <div id="viewPre" class="html">
+                    	
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row ends-->
+    </div>
+    </div>
+    <script src="js/main.js"></script>
 
-		<h1>Lorem ipsum dolor sit amet.</h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta est itaque inventore, eum hic, ullam quos sint dolore doloremque rerum!</p>
-		<br />
-		HTML
-		CSS
-		JavaScript
-		<br />
-		<hr>
-		<a href="#">Mani</a>
-		<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, dicta?</span>
-		<table>
-			<tr>
-				<td>mani 1</td>
-				<td>mani 2</td>
-			</tr>
-			<tr>
-				<td>mani 1</td>
-				<td>mani 2</td>
-			</tr>
-			<tr>
-				<td>mani 1</td>
-				<td>mani 2</td>
-			</tr>
-			<tr>
-				<td>mani 1</td>
-				<td>mani 2</td>
-			</tr>
-		</table>
-	</div>
-	<div class="codearea ">
-		<div id="viewPre" class="html"></div>
-	</div>
-	</div>
-</div>
-</div>
-		<script src="js/main.js"></script>
-		
 </body>
+
 </html>

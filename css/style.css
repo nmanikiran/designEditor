@@ -7,14 +7,27 @@
 	box-sizing: border-box;
 }
 
+ul, ol{
+	padding-left: 20px;
+}
+
+body{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
 .clearfix{
 	clear: both;
 	content: "";
+	display: table;
 }
 .container{
-	width: 95%;
-	margin: 20px auto;
-	clear: both;
+	padding: 20px;
+}
+.btn-group{
+	float: left;
 }
 .btn, .mywysiswyg select{
 	text-decoration: none;
@@ -24,24 +37,26 @@
 }
 
 .mywysiswyg .btn-group{
-	margin: 10px 0;
+	margin: 5px;
 	display: inline-block;
 }
-
- .previewarea, .codearea{
-	border: 1px solid #ccc;
+.row{
+	margin: 5px 0;
+}
+.grid6{
 	float: left;
 	width: 50%;
-	margin-top: 5px;
+}
+ .previewarea, .codearea{
+	border: 1px solid #ccc;
 	height: 500px;
 	padding: 5px;
 }
-ul, ol{
-	padding-left: 20px;
-}
+
 .codearea{
 	padding-left: 10px;
 }
+
 #viewPre{
 	white-space: pre-wrap;
 	overflow: auto;
@@ -52,9 +67,20 @@ ul, ol{
 	height: 0;
 	opacity: 0;
 }
+.h-block{
+	background: #f5f5f5;
+	padding: 5px;
+	font-weight: bold;
+}
+input[type='color']{
+	height: 22px;
+}
 @media (max-width: 768px) {
-	.previewarea, .codearea{
+	.container{
+		padding: 2px;
+	}
+	.grid6{
 		width: 100%;
 	}
-	
+
 }
