@@ -100,10 +100,7 @@ hr{
 input[type='color']{
 	height: 22px;
 }
-.copyright{
-	text-align: center;
-	padding: 10px 0;
-}
+
 @media (max-width: 768px) {
 	.container{
 		padding: 2px;
